@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  cursor: none;
+}
+
+.custom-cursor a,
+.custom-cursor button {
+  cursor: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Ticker animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker-scroll 25s linear infinite;
+}
+
+/* Hero glow animations */
+@keyframes glow1 {
+  0%, 100% {
+    transform: translate(-10%, -10%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(10%, 10%) scale(1.15);
+    opacity: 0.25;
+  }
+}
+
+@keyframes glow2 {
+  0%, 100% {
+    transform: translate(10%, 10%) scale(1.1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-10%, -10%) scale(0.95);
+    opacity: 0.2;
+  }
+}
+
+.hero-glow-1 {
+  animation: glow1 6s ease-in-out infinite;
+}
+
+.hero-glow-2 {
+  animation: glow2 8s ease-in-out infinite;
+}
+
+/* Grid background shift */
+@keyframes grid-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 60px;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-shift 20s linear infinite;
+}
+
+/* Pulse animation for pipeline circles */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 111, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(0, 111, 255, 0);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* CTA glow morph */
+@keyframes cta-glow-morph {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+}
+
+.cta-glow-morph {
+  animation: cta-glow-morph 4s ease-in-out infinite;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 111, 255, 0.3);
+  color: #fff;
+}
+
+/* Input styling */
+input, textarea, select {
+  font-family: 'Poppins', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
