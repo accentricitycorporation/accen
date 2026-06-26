@@ -9,6 +9,8 @@ import Services from './pages/Services'
 import HowItWorks from './pages/HowItWorks'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import LeadForm from './pages/LeadForm'
+import BookCall from "./pages/BookCall";
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -49,6 +51,8 @@ export default function App() {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/lead-form" element={<LeadForm />} />
+          <Route path="/book-call" element={<BookCall />} />
         </Routes>
       </AnimatePresence>
       <Footer />
