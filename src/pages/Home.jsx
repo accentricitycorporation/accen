@@ -7,7 +7,7 @@ import CTABanner from '../components/CTABanner'
 
 /* ─── Hero word-by-word animation ─── */
 function AnimatedHeadline() {
-  const line1 = ['We', 'build', 'the', 'systems', 'that']
+  const line1 = ['Wee', 'build', 'the', 'systems', 'that']
   const line2 = ['scale', 'businesses']
   const line3 = ['online.']
 
