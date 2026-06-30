@@ -1,7 +1,8 @@
+
+
 import { useEffect } from "react";
 
 export default function LeadForm() {
-
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://link.msgsndr.com/js/form_embed.js";
@@ -18,21 +19,22 @@ export default function LeadForm() {
     <div
       style={{
         width: "100%",
-        maxWidth: "700px",
-        margin: "40px auto",
-        height: "920px",
+        minHeight: "100vh",
+        padding: "40px 20px",
+        background: "#ffffff",
       }}
     >
       <iframe
-        src="https://api.leadconnectorhq.com/widget/form/Lp1fGKHVDjKWpfFEUKrt"
+        src="https://api.leadconnectorhq.com/widget/form/fnG1tGbxQoyTW8hXHQ3N"
         style={{
           width: "100%",
-          height: "100%",
+          height: "960px",
           border: "none",
+          borderRadius: "12px",
         }}
-        id="inline-Lp1fGKHVDjKWpfFEUKrt"
+        id="inline-fnG1tGbxQoyTW8hXHQ3N"
         title="Accentricity India"
-      />
+      ></iframe>
     </div>
   );
 }
